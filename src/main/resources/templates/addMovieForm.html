@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodoaj Film</title>
+</head>
+<body>
+
+
+<h1>Dodawanie filmu</h1>
+<form method="post" action="/addmovie" th:object="${movie}">
+    <input type="text" th:filed="*{title}"/><br>
+    <input type="date" th:filed="*{premiereDate}"/><br>
+
+    <select th:field="*{targetAudience}">
+        <option th:each="o: ${T(pl.ls.zaj_26.TargetAudience).values()}"
+                th:value="${o.name()}"
+                th:text="${o.name()}">
+
+        </option>
+    </select></br>
+
+
+    <input type="text" th:filed="*{budget}"/><br>
+    <input type="submit" value="OK">
+</form>
+
+
+</body>
+
+
+</html>

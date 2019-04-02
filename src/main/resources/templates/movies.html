@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filmki</title>
+</head>
+<body>
+
+
+<a href="/addmovie">Dodaj Film</a>
+<ul>
+    <li th:each="movie: ${movies}">
+
+      <a th:href="|/infoMovie/${movie.id}|"  th:text="${movie.title} ">Tytanic
+
+    </li>
+</ul>
+
+
+
+</body>
+</html>

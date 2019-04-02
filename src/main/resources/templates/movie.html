@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Filmiki</title>
+</head>
+<body>
+
+<a href="/">Powrót do strony głownej</a>
+<h1 th:text="${movie.title}"></h1>
+
+<p th:text="|Data premiery: ${movie.premiereDate}|"></p>
+<p th:text="|Budżet: ${movie.budget}|"></p>
+<p th:text="|Dla kogo: ${movie.targetAudience}|"></p>
+
+
+</body>
+</html>
